@@ -9,6 +9,7 @@ import TogetherCartStart from '@/components/TogetherCartStart.vue';
 import SearchScreen from '@/components/SearchScreen.vue';
 import SearchResult from '@/components/SearchResult.vue';
 import SearchResultAfterAdd from '@/components/SearchResultAfterAdd.vue';
+import HomeScreenAfterCart from '@/components/HomeScreenAfterCart.vue';
 
 const routes = [
   { path: '/', component: InitialLoading },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/search', component: SearchScreen },
   { path: '/search-result', component: SearchResult },
   { path: '/search-result-after-add', component: SearchResultAfterAdd },
+  { path: '/home-after-cart', component: HomeScreenAfterCart }
 ];
 
 const router = createRouter({
