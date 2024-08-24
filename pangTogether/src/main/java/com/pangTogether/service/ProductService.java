@@ -31,11 +31,11 @@ public class ProductService {
     }
 
     public List<Product> getProductsByCategory(String category) {
-        return productRepository.findByPCategory(category);
+        return productRepository.findByCategory(category);
     }
 
     public List<Product> searchProducts(String keyword) {
-        return productRepository.findByPNameContaining(keyword);
+        return productRepository.findByNameContaining(keyword);
     }
 
     @Transactional
