@@ -17,11 +17,11 @@ public class Cartuser {
     private Long cartUsersId;
 
     @ManyToOne
-    @Column(name="cart_id", nullable = false)
+    @JoinColumn(name="cart_id", nullable = false)
     private Cart cartId;
 
     @ManyToOne
-    @Column(name="user_id", nullable = false)
+    @JoinColumn(name="user_id", nullable = false)
     private User userId;
 
     @Column(name="is_payment_authority")

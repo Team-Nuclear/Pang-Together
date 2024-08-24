@@ -29,7 +29,7 @@ public class Cart {
     private Status status;
 
     @Enumerated(EnumType.STRING)
-    @Column(name="paymnet_type")
+    @Column(name="payment_type")
     private PaymentType paymentType;
 
     @Column(name="share_code")

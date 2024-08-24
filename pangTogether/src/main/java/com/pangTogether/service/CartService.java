@@ -3,8 +3,10 @@ package com.pangTogether.service;
 import com.pangTogether.dto.CartDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 public interface CartService {
-    public CartDTO getCartById(long cartId);
+    public List<CartDTO> getCart();
 
 }
