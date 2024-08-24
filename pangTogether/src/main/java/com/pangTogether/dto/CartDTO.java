@@ -42,4 +42,9 @@ public class CartDTO {
                 .build();
 
     }
+
+    // formatting timestamp
+    public String getCreatedAt() {
+        return createdAt != null ? createdAt.toLocalDateTime().toString() : null;
+    }
 }
