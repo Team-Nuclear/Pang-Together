@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Cartuser {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="cart_users_id")
     private Long cartUsersId;
 
@@ -30,6 +31,15 @@ public class Cartuser {
     @Enumerated(EnumType.STRING)
     @Column(name="payment_status")
     private PaymentStatus paymentStatus;
+
+    public Cartuser toDomain(Cart cart, User user) {
+        return Cartuser.builder()
+                .cartId(cart)
+                .userId(user)
+                .isPaymentAuthority(this.isPaymentAuthority())
+                .paymentStatus(this.getPaymentStatus())
+                .build();
+    }
 
     public Cartuser() {
 

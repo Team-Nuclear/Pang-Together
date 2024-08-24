@@ -1,10 +1,7 @@
 package com.pangTogether.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 
@@ -12,6 +9,7 @@ import java.sql.Timestamp;
 @Table(name = "carts")
 @Getter
 @Builder
+@Setter
 @AllArgsConstructor
 public class Cart {
     @Id
@@ -19,7 +17,7 @@ public class Cart {
     @Column(name = "cart_id")
     private Long cartId;
 
-    @Column(name ="name")
+    @Column(name ="name", unique = true)
     private String name;
 
     @Column(name="created_at")

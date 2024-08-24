@@ -12,10 +12,10 @@ import java.util.List;
 
 
 public interface CartService {
-//    public List<CartDTO> getCart();
 
     public CartDTO createCart(String name, Timestamp createdAt, Status status, PaymentType paymentType, String shareCode, String cartCategory);
 
+    public String generateShareCode();
 
 
 }
