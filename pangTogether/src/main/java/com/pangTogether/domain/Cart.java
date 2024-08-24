@@ -1,9 +1,6 @@
 package com.pangTogether.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,9 +24,11 @@ public class Cart {
     @Column(name="created_at")
     private Timestamp createdAt;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="status")
     private Status status;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="paymnet_type")
     private PaymentType paymentType;
 

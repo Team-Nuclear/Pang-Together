@@ -27,6 +27,7 @@ public class Cartuser {
     @Column(name="is_payment_authority")
     private boolean isPaymentAuthority;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="payment_status")
     private PaymentStatus paymentStatus;
 
