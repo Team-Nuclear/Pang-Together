@@ -3,19 +3,50 @@
     <div class="e42_124"></div>
     <div class="e42_126"></div>
     <div class="e42_141"></div>
-    <div class="e42_179"></div>
+    <div class="e42_179">
+        <input
+            v-model="cart.shareCode"
+            type="text"
+            style="width:300px; height: 60px; margin-top: 50px; font-size:25px; text-align:center"
+        />
+    </div>
     <div class="e88_135" @click="goToHome"></div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
+  data() {
+    return {
+      cart: '',
+    };
+  },  
   name: 'TogetherCartStart',
   methods: {
     goToHome() {
       this.$router.push('/home');
     },
   },
+    created() {
+    const url = 'http://localhost:8080/api'; // Replace with your API endpoint
+    const name = 'testUser999';
+    const createdAt = '2024-08-25 02:34:01';
+    const status = "ACTIVE";
+    const paymentType = "SINGLE";
+    const cartCategory = "FOOD";
+     axios
+      .post(url+"/carts?name="+name+"&createdAt="+createdAt+"&status="+status+"&paymentType="+paymentType+"&cartCategory="+cartCategory, {
+      })
+      .then((res) => {
+        this.cart = res.data;
+        console.log(this.cart);
+      })
+      .catch((err) => {
+        console.log(err);
+        this.check = 'error';
+      });
+  }
 };
 </script>
 

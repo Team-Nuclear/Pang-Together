@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: 'SearchResultAfterAdd',
     methods: {
@@ -19,6 +20,20 @@ export default {
       this.$router.push('/home');
     },
   },
+  created() {
+    const url = 'http://localhost:8080/api'; // Replace with your API endpoint
+     axios
+      .post(url+"/carts/1/items", {
+      })
+      .then((res) => {
+        this.user = res.data;
+        console.log(this.user);
+      })
+      .catch((err) => {
+        console.log(err);
+        this.check = 'error';
+      });
+  }
 };
 </script>
 

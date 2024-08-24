@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'TogetherCartHome',
   methods: {
@@ -17,6 +18,7 @@ export default {
       this.$router.push('/together-cart-start');
     },
   },
+
 };
 </script>
 
