@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +14,8 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "carts")
 @Getter
-@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Cart {
     @Id
     @Column(name = "cart_id")
@@ -35,4 +38,6 @@ public class Cart {
 
     @Column(name="cart_category")
     private String cartCategory;
+
+    public Cart(){}
 }

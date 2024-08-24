@@ -1,13 +1,16 @@
 package com.pangTogether.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "cart_itmes")
 @Getter
-@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class CartItems {
     @Id
     @Column(name = "cart_items_id")
@@ -24,4 +27,7 @@ public class CartItems {
     @Column(name="quantity")
     private int quantity;
 
+    public CartItems() {
+
+    }
 }

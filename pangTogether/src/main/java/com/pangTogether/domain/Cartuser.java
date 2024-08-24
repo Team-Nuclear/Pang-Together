@@ -1,13 +1,16 @@
 package com.pangTogether.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "cart_users")
 @Getter
-@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Cartuser {
     @Id
     @Column(name="cart_users_id")
@@ -27,4 +30,7 @@ public class Cartuser {
     @Column(name="payment_status")
     private PaymentStatus paymentStatus;
 
+    public Cartuser() {
+
+    }
 }
