@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'top_button';
+    src: url('@/assets/fonts/top_button.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'top_button', sans-serif;
+  }
