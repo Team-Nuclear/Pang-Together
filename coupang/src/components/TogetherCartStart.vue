@@ -29,7 +29,7 @@ export default {
     },
   },
     created() {
-    const url = 'http://localhost:8080/api'; // Replace with your API endpoint
+    const url = 'http://localhost:8080/api'; 
     const name = 'testUser999';
     const createdAt = '2024-08-25 02:34:01';
     const status = "ACTIVE";

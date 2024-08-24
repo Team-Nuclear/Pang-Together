@@ -14,6 +14,11 @@
 <script>
 import axios from "axios";
 export default {
+  data() {
+    return {
+      cart: '',
+    };
+  },  
   name: 'SearchResultAfterAdd',
     methods: {
     goToHome() {
@@ -26,8 +31,8 @@ export default {
       .post(url+"/carts/1/items", {
       })
       .then((res) => {
-        this.user = res.data;
-        console.log(this.user);
+        this.cart = res.data;
+        console.log(this.cart);
       })
       .catch((err) => {
         console.log(err);
