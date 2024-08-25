@@ -51,7 +51,7 @@ Social Commerce and Group Buying
   
 3. **Demo**
     - Showcase the technical strengths, usability, and performance of Pang-Together.  
-    - [Watch Demo on YouTube](https://www.youtube.com/your-demo-link)
+    - [Live Project URL](http://youtube.com/watch?v=0jYyDYt9-2g&feature=youtu.be)
 
 4. **Future Roadmap**
     - Enhance AI recommendation accuracy.
