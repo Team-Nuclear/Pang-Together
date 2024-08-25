@@ -10,6 +10,9 @@ import SearchScreen from '@/components/SearchScreen.vue';
 import SearchResult from '@/components/SearchResult.vue';
 import SearchResultAfterAdd from '@/components/SearchResultAfterAdd.vue';
 import HomeScreenAfterCart from '@/components/HomeScreenAfterCart.vue';
+import TogetherCartList from '@/components/TogetherCartList.vue';
+import PaymentInitial from '@/components/PaymentInitial.vue';
+import ChatScreen from '@/components/ChatScreen.vue';
 
 const routes = [
   { path: '/', component: InitialLoading },
@@ -21,7 +24,10 @@ const routes = [
   { path: '/search', component: SearchScreen },
   { path: '/search-result', component: SearchResult },
   { path: '/search-result-after-add', component: SearchResultAfterAdd },
-  { path: '/home-after-cart', component: HomeScreenAfterCart }
+  { path: '/home-after-cart', component: HomeScreenAfterCart },
+  { path: '/cart-list', component: TogetherCartList },
+  { path: '/pay-initial', component: PaymentInitial },
+  { path: '/chat', component: ChatScreen },
 ];
 
 const router = createRouter({

@@ -1,6 +1,6 @@
 <template>
   <div class="e102_102">
-    <div class="e102_103"></div>
+    <div class="e102_103" ></div>
     <div class="e102_104">
       <span class="ei102_104_15_382">공유 장바구니</span>
     </div>
@@ -22,13 +22,18 @@
       <div class="e102_137"></div>
       <span class="e102_138">11,080원 (33,240/3원)</span>
     </div>
-    <div class="e113_245"></div>
+    <div class="e113_245" @click="goToHome"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ShoppingCartDetails',
+  name: 'PaymentInitial',
+  methods: {
+    goToHome() {
+      this.$router.push('/home-after-cart');
+    },
+  },
 };
 </script>
 
@@ -80,7 +85,7 @@ export default {
   position: absolute;
   left: 0px;
   top: 56px;
-  background-image: url(@/assets/.png); /* Adjust the path if necessary */
+  background-image: url(@/assets/cart_base.png); /* Adjust the path if necessary */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -109,7 +114,7 @@ export default {
   position: absolute;
   left: 0px;
   top: 480px;
-  background-image: url(@/assets/image_29.png); /* Adjust the path if necessary */
+  background-image: url(@/assets/address_screen.png); /* Adjust the path if necessary */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -120,7 +125,7 @@ export default {
   position: absolute;
   left: 83px;
   top: 606px;
-  background-image: url(@/assets/image_30.png); /* Adjust the path if necessary */
+  background-image: url(@/assets/address.png); /* Adjust the path if necessary */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -191,7 +196,7 @@ export default {
   position: absolute;
   left: 16px;
   top: 765px;
-  background-image: url(@/assets/image_32.png); /* Adjust the path if necessary */
+  background-image: url(@/assets/small_arrow.png); /* Adjust the path if necessary */
   background-repeat: no-repeat;
   background-size: cover;
 }

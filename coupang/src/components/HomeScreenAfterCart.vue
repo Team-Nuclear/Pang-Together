@@ -2,7 +2,7 @@
   <div class="e42_145">
     <div class="e42_146"></div>
     <div class="e42_149" @click="goToSearchScreen"></div>
-    <div class="e42_147" @click="goToCartHome"></div>
+    <div class="e42_147" @click="goToCartList"></div>
   </div>
 </template>
 
@@ -10,8 +10,8 @@
 export default {
   name: 'HomeScreenAfterCart',
   methods: {
-    goToCartHome() {
-      this.$router.push('/cart-home');
+    goToCartList() {
+      this.$router.push('/cart-list');
     },
 
      goToSearchScreen() {

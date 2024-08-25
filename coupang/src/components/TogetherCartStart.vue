@@ -22,16 +22,16 @@ export default {
       cart: '',
     };
   },  
-  name: 'TogetherCartStart',
+  name: 'TogetherCartStartAfterCart',
   methods: {
     goToHome() {
-      this.$router.push('/home');
+      this.$router.push('/home-after-cart');
     },
   },
     created() {
-    const url = 'http://localhost:8080/api'; 
+    const url = 'http://localhost:8082/api'; 
     const name = 'testUser999';
-    const createdAt = '2024-08-25 02:34:01';
+    const createdAt = "2024-08-25 02:34:01";
     const status = "ACTIVE";
     const paymentType = "SINGLE";
     const cartCategory = "FOOD";

@@ -22,13 +22,15 @@ public class CartController {
     private final CartUserServiceImpl cartUserService;
 
     @PostMapping(path="/api/carts")
-    public CartDTO createCart(@RequestParam String name,
-                              @RequestParam Timestamp createdAt,
-                              @RequestParam Status status,
-                              @RequestParam PaymentType paymentType,
-                              @RequestParam String cartCategory) {
-
+    public CartDTO createCart(@RequestParam(name = "name") String name,
+                                @RequestParam(name = "createdAt") Timestamp createdAt,
+                                @RequestParam(name = "status") Status status,
+                                @RequestParam(name = "paymentType") PaymentType paymentType,
+                                @RequestParam(name = "cartCategory") String cartCategory) {
+                                
+        System.out.println(name);                       
         String randomShareCode = cartService.generateShareCode();
+        System.out.println(randomShareCode);
         return cartService.createCart(name, createdAt, status, paymentType, randomShareCode, cartCategory);
     }
 

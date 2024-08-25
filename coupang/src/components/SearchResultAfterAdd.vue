@@ -22,7 +22,7 @@ export default {
   name: 'SearchResultAfterAdd',
     methods: {
     goToHome() {
-      this.$router.push('/home');
+      this.$router.push('/home-after-cart');
     },
   },
   created() {
