@@ -62,7 +62,7 @@ Social Commerce and Group Buying
 
 ## Project Demo Link
 
-[Live Project URL]([https://your-demo-link.com](http://youtube.com/watch?v=0jYyDYt9-2g&feature=youtu.be))
+[Live Project URL](http://youtube.com/watch?v=0jYyDYt9-2g&feature=youtu.be)
 
 This demo showcases the improvements made during the hackathon, including the new real-time synchronization and payment features.
 
